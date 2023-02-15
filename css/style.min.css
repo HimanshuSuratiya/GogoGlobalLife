@@ -19802,15 +19802,23 @@ ul.navbar-nav.ms-auto.d-flex.align-items-center {
 
 /* Himanshu css */
 
-/* Search Page */
-.search-stock-main-div {
-  padding: 0px 12px;
-}
-
-.search-stock-finder-inner-div {
+/* Heading */
+.heading-main-div-area {
   box-shadow: 0 1px 2px rgb(56 65 74 / 15%) !important;
   border-radius: 5px;
   transition: .5s;
+}
+
+.heading-main-div-area h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: 600;
+}
+
+/* Search Page */
+.search-stock-main-div {
+  padding: 0px 12px;
 }
 
 .main-input-field-area {
@@ -19830,6 +19838,85 @@ ul.navbar-nav.ms-auto.d-flex.align-items-center {
   border-radius: 11px;
   border: none;
   text-align: center;
-  width: 300px;
+  width: 400px;
   font-size: 20px;
+}
+
+/* Tyre List */
+.tyre-list-main-div {
+  padding: 0px 12px;
+}
+
+.tyre-card-main-div {
+  box-shadow: 0 1px 2px rgb(56 65 74 / 15%) !important;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+  margin: 5px 0px;
+}
+
+.card-left-main-div {
+  width: 70%;
+  border-right: 1px solid #cccccc;
+}
+
+.card-right-main-div {
+  width: 30%;
+}
+
+.tyre-left-left-tyre-image img {
+  height: 120px;
+}
+
+.card-heading-with-icon h6 {
+  font-weight: 500;
+  color: #4691ce;
+}
+
+.card-heading-with-icon i {
+  font-size: 25px;
+  color: #4691ce;
+}
+
+.top-model-code-area {
+  padding: 8px 10px 7px 10px;
+}
+
+.top-model-code-area h6 {
+  color: #4691ce;
+  font-weight: 600;
+}
+
+.add-to-card-section {
+  padding: 8px 10px 8px 10px;
+}
+
+.add-to-card-section input {
+  width: 25px;
+  height: 20px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.add-to-card-section i {
+  color: #4691ce;
+}
+
+.add-to-card-detail h6 {
+  font-weight: 500;
+  color: #4691ce;
+}
+
+.brand h6 {
+  font-weight: 500;
+  color: #4691ce;
+}
+
+.brand p {
+  font-weight: 500;
+}
+
+.more-details h6 {
+  font-size: 12px;
+  color: #000;
+  font-weight: 500;
 }
