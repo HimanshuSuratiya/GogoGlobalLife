@@ -19891,10 +19891,13 @@ ul.navbar-nav.ms-auto.d-flex.align-items-center {
 }
 
 .add-to-card-section input {
-  width: 40px;
+  width: 45px;
   height: 20px;
   margin-right: 10px;
   font-size: 12px;
+  border: 2px solid #4691ce;
+  border-radius: 5px;
+  padding: 0px 4px;
 }
 
 .add-to-card-section i {
@@ -19915,7 +19918,7 @@ ul.navbar-nav.ms-auto.d-flex.align-items-center {
   font-weight: 500;
 }
 
-.more-details h6 {
+.more-details h6 a {
   font-size: 12px;
   color: #000;
   font-weight: 500;
@@ -20055,5 +20058,217 @@ ul.navbar-nav.ms-auto.d-flex.align-items-center {
 
   .hiddenMobile {
     display: none !important;
+  }
+}
+
+/* Product Detail */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  line-height: 1.5;
+}
+
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-imgs img {
+  width: 100%;
+  display: block;
+}
+
+.img-display {
+  overflow: hidden;
+}
+
+.img-showcase {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.img-showcase img {
+  min-width: 100%;
+  height: 570px;
+  object-fit: cover;
+}
+
+.img-select {
+  display: flex;
+}
+
+.img-item {
+  margin: 0.3rem;
+}
+
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3) {
+  margin-right: 0;
+}
+
+.img-item:hover {
+  opacity: 0.8;
+}
+
+.product-content {
+  padding: 2rem 1rem;
+}
+
+.product-title {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 1rem 0;
+}
+
+.product-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  background: #256eff;
+  color: #fff;
+  padding: 0 0.5rem;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+}
+
+.product-link:hover {
+  background: #4691ce;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.product-rating {
+  color: #ffc107;
+}
+
+.product-rating span {
+  font-weight: 600;
+  color: #252525;
+}
+
+.product-price {
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.product-price span {
+  font-weight: 400;
+}
+
+.last-price span {
+  color: #f64749;
+  text-decoration: line-through;
+}
+
+.new-price span {
+  color: #256eff;
+}
+
+.product-detail h2 {
+  text-transform: capitalize;
+  color: #12263a;
+  padding-bottom: 0.6rem;
+}
+
+.product-detail p {
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  opacity: 0.8;
+}
+
+.product-detail ul {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.product-detail ul li {
+  margin: 0;
+  list-style: none;
+  background: url(https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/checked.png) left center no-repeat;
+  background-size: 18px;
+  padding-left: 1.7rem;
+  margin: 0.4rem 0;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.product-detail ul li span {
+  font-weight: 400;
+}
+
+.purchase-info {
+  margin: 1.5rem 0;
+}
+
+.purchase-info input,
+.purchase-info .btn {
+  border: 1.5px solid #ddd;
+  border-radius: 25px;
+  text-align: center;
+  padding: 0.45rem 0.8rem;
+  outline: 0;
+  margin-right: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.purchase-info input {
+  width: 60px;
+  margin-bottom: 0px;
+}
+
+.purchase-info .btn {
+  cursor: pointer;
+  color: #fff;
+}
+
+.purchase-info .btn:first-of-type {
+  background: #256eff;
+}
+
+.purchase-info .btn:last-of-type {
+  background: #f64749;
+  margin-bottom: 0px;
+}
+
+.purchase-info .btn:hover {
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+
+  .card-wrapper {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12px;
+    border-radius: 5px;
+  }
+
+  .product-imgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .product-content {
+    padding-top: 0;
   }
 }
