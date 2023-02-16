@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>gogoGlobal.LIFE</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link href="plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+    <!-- Custom CSS -->
+    <link href="./css/style.min.css" rel="stylesheet">
+    <link href="./css/fontawesome.min.css" rel="stylesheet">
+    <link href="./css/responsive.css" rel="stylesheet">
+</head>
+
+<body style="font-family: Roboto, sans-serif;">
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <header class="topbar top_header responsive_head" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- Logo -->
+                    <a class="navbar-brand navbar_logo" href="dashboard.html">
+                        <span class="logo-icon icon_logo">
+                            <img src="images/logopng.png" alt="logo-img">
+                        </span>
+                    </a>
+                    <!-- toggle and nav items -->
+                    <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+                        href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                </div>
+                <i class='fas fa-bars' style='color: #4691ce; font-size: 22px; margin-left: 10px;'></i>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse collapse_navbar" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <ul class="navbar-nav d-none d-md-block d-lg-none">
+                        <li class="nav-item">
+                            <a class="nav-toggler nav-link waves-effect waves-light text-white"
+                                href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav ms-auto d-flex align-items-center">
+                        <li class=" in">
+                            <form role="search" class="app-search d-none d-md-block me-3">
+                                <input type="text" placeholder="Search..." class="form-control mt-0 border_color">
+                                <a href="" class="active">
+                                    <i class="fa fa-search" style="color: #4691ce;"></i>
+                                </a>
+                            </form>
+                        </li>
+
+                        <li class="dropdown">
+                            <a class="profile-pic" href="profile-details.html" class="dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <img src="plugins/images/users/varun.jpg" alt="user-img" width="36"
+                                    class="img-circle"><span class="text-white font-medium">Steave <i
+                                        class="fa fa-caret-down" aria-hidden="true"></i></span>
+                            </a>
+                            <ul class="dropdown-menu profileDropdown">
+                                <li><a class="dropdown-item" href="profile-details.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="settings.html">Setting</a></li>
+                                <li><a class="dropdown-item" href="login.html">Log Out</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="notification_bell">
+                            <a href="#" class="color_white"><i class="fas fa-bell"></i></a>
+                            <span class="noti_number">5</span>
+                        </li>
+                        <li class="comment_chat">
+                            <a href="#" class="color_white"><i class="far fa-comment-alt"></i></a>
+                            <span class="chat_number">7</span>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar left_aside" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" class="nav_bar_side">
+                        <!-- User Profile-->
+                        <li class="sidebar-item pt-2">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar"
+                                href="dashboard.html" aria-expanded="false">
+                                <i class="fas fa-tachometer-alt leftside_icon"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar"
+                                href="manage-admins.html" aria-expanded="false">
+                                <i class="fas fa-user-plus leftside_icon"></i>
+                                <span class="hide-menu">Manage Admins</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar"
+                                href="admin-details.html" aria-expanded="false">
+                                <i class="fas fa-users leftside_icon"></i>
+                                <span class="hide-menu">Admin Details</span>
+                            </a>
+                        </li>
+                        <!-- <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="forms.html"
+                                aria-expanded="false">
+                                <i class="fas fa-users leftside_icon"></i>
+                                <span class="hide-menu">Forms</span>
+                            </a>
+                        </li> -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar"
+                                href="./setting.html" aria-expanded="false">
+                                <i class="fas fa-cog leftside_icon"></i>
+                                <span class="hide-menu">Settings</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar"
+                                href="notification.html" aria-expanded="false">
+                                <i class="fas fa-bell leftside_icon"></i>
+                                <span class="hide-menu">Notifications</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="faq.html"
+                                aria-expanded="false">
+                                <i class="fas fa-question-circle leftside_icon"></i>
+                                <span class="hide-menu">FAQ</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar"
+                                href="contact-us.html" aria-expanded="false">
+                                <i class="fas fa-address-card leftside_icon"></i>
+                                <span class="hide-menu">Contact Us</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar"
+                                href="term-condition.html" aria-expanded="false">
+                                <i class="fas fa-certificate leftside_icon" aria-hidden="true"></i>
+                                <span class="hide-menu">Terms & Conditions</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar"
+                                href="privacy-policy.html" aria-expanded="false">
+                                <i class="fas fa-file-alt leftside_icon"></i>
+                                <span class="hide-menu">Privacy & Policy</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="search.html"
+                                aria-expanded="false">
+                                <i class="fas fa-file-alt leftside_icon"></i>
+                                <span class="hide-menu">Search</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar"
+                                href="tyrelist.html" aria-expanded="false">
+                                <i class="fas fa-file-alt leftside_icon"></i>
+                                <span class="hide-menu">Tyre Lists</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar"
+                                href="myorder.html" aria-expanded="false">
+                                <i class="fas fa-file-alt leftside_icon"></i>
+                                <span class="hide-menu">My order</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="login.html"
+                                aria-expanded="false">
+                                <i class="fas fa-power-off leftside_icon"></i>
+                                <span class="hide-menu">Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+
+        <div class="page-wrapper wrapper_page">
+            <div class="page-breadcrumb bg-white white_bg">
+                <div class="search-stock-main-div">
+                    <div class="my-4">
+                        <div class="heading-main-div-area py-4 bg-white">
+                            <h2 class="text-center p-0 m-0">Invoice</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center">
+                    <!-- Header -->
+                    <div>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="fullTable">
+                            <tr>
+                                <td height="20"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" class="fullTable"
+                                        bgcolor="#ffffff" style="border-radius: 10px 10px 0 0;">
+                                        <tr class="hiddenMobile">
+                                            <td height="40"></td>
+                                        </tr>
+                                        <tr class="visibleMobile">
+                                            <td height="30"></td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td>
+                                                <table width="480" border="0" cellpadding="0" cellspacing="0"
+                                                    class="fullPadding">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <table width="220" border="0" cellpadding="0"
+                                                                    cellspacing="0" align="left" class="col">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td align="left"> <img
+                                                                                    src="http://www.supah.it/dribbble/017/logo.png"
+                                                                                    width="32" height="32" alt="logo"
+                                                                                    border="0" /></td>
+                                                                        </tr>
+                                                                        <tr class="hiddenMobile">
+                                                                            <td height="40"></td>
+                                                                        </tr>
+                                                                        <tr class="visibleMobile">
+                                                                            <td height="20"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: left;">
+                                                                                Hello, Philip Brooks.
+                                                                                <br> Thank you for shopping from our
+                                                                                store
+                                                                                and
+                                                                                for your order.
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table width="220" border="0" cellpadding="0"
+                                                                    cellspacing="0" align="right" class="col">
+                                                                    <tbody>
+                                                                        <tr class="visibleMobile">
+                                                                            <td height="20"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="5"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="font-size: 21px; color: #ff0000; letter-spacing: -1px; font-family: 'Open Sans', sans-serif; line-height: 1; vertical-align: top; text-align: right;">
+                                                                                Invoice
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                        <tr class="hiddenMobile">
+                                                                            <td height="50"></td>
+                                                                        </tr>
+                                                                        <tr class="visibleMobile">
+                                                                            <td height="20"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: right;">
+                                                                                <small>ORDER</small> #800000025<br />
+                                                                                <small>MARCH 4TH 2016</small>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- /Header -->
+
+
+                        <!-- Order Details -->
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="fullTable">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table width="600" border="0" cellpadding="0" cellspacing="0" class="fullTable"
+                                            bgcolor="#ffffff">
+                                            <tbody>
+                                                <tr>
+                                                <tr class="hiddenMobile">
+                                                    <td height="60"></td>
+                                                </tr>
+                                                <tr class="visibleMobile">
+                                                    <td height="40"></td>
+                                                </tr>
+                                                <tr align="center">
+                                                    <td>
+                                                        <table width="480" border="0" cellpadding="0" cellspacing="0"
+                                                            class="fullPadding">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;"
+                                                                        width="52%" align="left">
+                                                                        Item
+                                                                    </th>
+                                                                    <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;"
+                                                                        align="left">
+                                                                        <small>SKU</small>
+                                                                    </th>
+                                                                    <th
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;">
+                                                                        Quantity
+                                                                    </th>
+                                                                    <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;"
+                                                                        align="right">
+                                                                        Subtotal
+                                                                    </th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1" style="background: #bebebe;"
+                                                                        colspan="4">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="10" colspan="4"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #ff0000;  line-height: 18px;  vertical-align: top; padding:10px 0;"
+                                                                        class="article">
+                                                                        Beats Studio Over-Ear Headphones
+                                                                    </td>
+                                                                    <td
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #646a6e;  line-height: 18px;  vertical-align: top; padding:10px 0;">
+                                                                        <small>MH792AM/A</small>
+                                                                    </td>
+                                                                    <td
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #646a6e;  line-height: 18px;  vertical-align: top; padding:10px 0;">
+                                                                        1</td>
+                                                                    <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33;  line-height: 18px;  vertical-align: top; padding:10px 0;"
+                                                                        align="right">$299.95</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1" colspan="4"
+                                                                        style="border-bottom:1px solid #e4e4e4"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #ff0000;  line-height: 18px;  vertical-align: top; padding:10px 0;"
+                                                                        class="article">Beats RemoteTalk Cable</td>
+                                                                    <td
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #646a6e;  line-height: 18px;  vertical-align: top; padding:10px 0;">
+                                                                        <small>MHDV2G/A</small>
+                                                                    </td>
+                                                                    <td
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #646a6e;  line-height: 18px;  vertical-align: top; padding:10px 0;">
+                                                                        1</td>
+                                                                    <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33;  line-height: 18px;  vertical-align: top; padding:10px 0;"
+                                                                        align="right">$29.95</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1" colspan="4"
+                                                                        style="border-bottom:1px solid #e4e4e4"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="20"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- /Order Details -->
+
+
+                        <!-- Total -->
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="fullTable">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table width="600" border="0" cellpadding="0" cellspacing="0" class="fullTable"
+                                            bgcolor="#ffffff">
+                                            <tbody>
+                                                <tr align="center">
+                                                    <td>
+                                                        <!-- Table Total -->
+                                                        <table width="480" border="0" cellpadding="0" cellspacing="0"
+                                                            class="fullPadding">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #646a6e; line-height: 22px; vertical-align: top; text-align:right; ">
+                                                                        Subtotal
+                                                                    </td>
+                                                                    <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #646a6e; line-height: 22px; vertical-align: top; text-align:right; white-space:nowrap;"
+                                                                        width="80">
+                                                                        $329.90
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #646a6e; line-height: 22px; vertical-align: top; text-align:right; ">
+                                                                        Shipping &amp; Handling
+                                                                    </td>
+                                                                    <td
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #646a6e; line-height: 22px; vertical-align: top; text-align:right; ">
+                                                                        $15.00
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #000; line-height: 22px; vertical-align: top; text-align:right; ">
+                                                                        <strong>Grand Total (Incl.Tax)</strong>
+                                                                    </td>
+                                                                    <td
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #000; line-height: 22px; vertical-align: top; text-align:right; ">
+                                                                        <strong>$344.90</strong>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #b0b0b0; line-height: 22px; vertical-align: top; text-align:right; ">
+                                                                        <small>TAX</small>
+                                                                    </td>
+                                                                    <td
+                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #b0b0b0; line-height: 22px; vertical-align: top; text-align:right; ">
+                                                                        <small>$72.40</small>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- /Table Total -->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- /Total -->
+
+
+                        <!-- Information -->
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="fullTable">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table width="600" border="0" cellpadding="0" cellspacing="0" class="fullTable"
+                                            bgcolor="#ffffff">
+                                            <tbody>
+                                                <tr>
+                                                <tr class="hiddenMobile">
+                                                    <td height="60"></td>
+                                                </tr>
+                                                <tr class="visibleMobile">
+                                                    <td height="40"></td>
+                                                </tr>
+                                                <tr align="center">
+                                                    <td>
+                                                        <table width="480" border="0" cellpadding="0" cellspacing="0"
+                                                            class="fullPadding">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table width="220" border="0" cellpadding="0"
+                                                                            cellspacing="0" align="left" class="col">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size: 11px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1; vertical-align: top; ">
+                                                                                        <strong>BILLING
+                                                                                            INFORMATION</strong>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td width="100%" height="10"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 20px; vertical-align: top; ">
+                                                                                        Philip Brooks<br> Public Wales,
+                                                                                        Somewhere<br> New York NY<br>
+                                                                                        4468,
+                                                                                        United States<br> T:
+                                                                                        202-555-0133
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                        <table width="220" border="0" cellpadding="0"
+                                                                            cellspacing="0" align="right" class="col">
+                                                                            <tbody>
+                                                                                <tr class="visibleMobile">
+                                                                                    <td height="20"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size: 11px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1; vertical-align: top; ">
+                                                                                        <strong>PAYMENT METHOD</strong>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td width="100%" height="10"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 20px; vertical-align: top; ">
+                                                                                        Credit Card<br> Credit Card
+                                                                                        Type:
+                                                                                        Visa<br> Worldpay Transaction
+                                                                                        ID: <a href="#"
+                                                                                            style="color: #ff0000; text-decoration:underline;">4185939336</a><br>
+                                                                                        <a href="#"
+                                                                                            style="color:#b0b0b0;">Right
+                                                                                            of Withdrawal</a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr align="center">
+                                                    <td>
+                                                        <table width="480" border="0" cellpadding="0" cellspacing="0"
+                                                            class="fullPadding">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table width="220" border="0" cellpadding="0"
+                                                                            cellspacing="0" align="left" class="col">
+                                                                            <tbody>
+                                                                                <tr class="hiddenMobile">
+                                                                                    <td height="35"></td>
+                                                                                </tr>
+                                                                                <tr class="visibleMobile">
+                                                                                    <td height="20"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size: 11px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1; vertical-align: top; ">
+                                                                                        <strong>SHIPPING
+                                                                                            INFORMATION</strong>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td width="100%" height="10"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 20px; vertical-align: top; ">
+                                                                                        Sup Inc<br> Another Place,
+                                                                                        Somewhere<br>
+                                                                                        New York NY<br> 4468, United
+                                                                                        States<br>
+                                                                                        T: 202-555-0171
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                        <table width="220" border="0" cellpadding="0"
+                                                                            cellspacing="0" align="right" class="col">
+                                                                            <tbody>
+                                                                                <tr class="hiddenMobile">
+                                                                                    <td height="35"></td>
+                                                                                </tr>
+                                                                                <tr class="visibleMobile">
+                                                                                    <td height="20"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size: 11px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1; vertical-align: top; ">
+                                                                                        <strong>SHIPPING METHOD</strong>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td width="100%" height="10"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 20px; vertical-align: top; ">
+                                                                                        UPS: U.S. Shipping Services
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr class="hiddenMobile">
+                                                    <td height="60"></td>
+                                                </tr>
+                                                <tr class="visibleMobile">
+                                                    <td height="30"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- /Information -->
+
+
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="fullTable">
+                            <tr>
+                                <td>
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" class="fullTable"
+                                        bgcolor="#ffffff" style="border-radius: 0 0 10px 10px;">
+                                        <tr>
+                                            <td>
+                                                <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                                    class="fullPadding">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center"
+                                                                style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top;">
+                                                                Have a nice day.
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr class="spacer">
+                                            <td height="50"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="20"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer text-center footer_text"> 2022 © All rights reserved. <a class="footer_link"
+                    href="#">gogoGlobal</a>
+            </footer>
+
+            <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+            <!-- Bootstrap tether Core JavaScript -->
+            <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="js/app-style-switcher.js"></script>
+            <script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+            <!--Wave Effects -->
+            <script src="js/waves.js"></script>
+            <!--Menu sidebar -->
+            <script src="js/sidebarmenu.js"></script>
+            <!--Custom JavaScript -->
+            <script src="js/custom.js"></script>
+            <!--This page JavaScript -->
+            <!--chartis chart-->
+            <script src="plugins/bower_components/chartist/dist/chartist.min.js"></script>
+            <script
+                src="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+            <script src="js/pages/dashboards/dashboard1.js"></script>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+            <script src="./js/char/t.js"></script>
+            <script src="./js/pie-chart.js"></script>
+</body>
+
+</html>

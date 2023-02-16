@@ -19990,8 +19990,70 @@ ul.navbar-nav.ms-auto.d-flex.align-items-center {
   cursor: pointer;
 }
 
-.view-more-details p {
+.view-more-details p a {
   color: #000;
   font-weight: 500;
   cursor: pointer;
+}
+
+/* Invoice */
+@media only screen and (max-width: 600px) {
+  body {
+    width: auto !important;
+  }
+
+  table[class=fullTable] {
+    width: 96% !important;
+    clear: both;
+  }
+
+  table[class=fullPadding] {
+    width: 85% !important;
+    clear: both;
+  }
+
+  table[class=col] {
+    width: 45% !important;
+  }
+
+  .erase {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  table[class=fullTable] {
+    width: 100% !important;
+    clear: both;
+  }
+
+  table[class=fullPadding] {
+    width: 85% !important;
+    clear: both;
+  }
+
+  table[class=col] {
+    width: 100% !important;
+    clear: both;
+  }
+
+  table[class=col] td {
+    text-align: left !important;
+  }
+
+  .erase {
+    display: none;
+    font-size: 0;
+    max-height: 0;
+    line-height: 0;
+    padding: 0;
+  }
+
+  .visibleMobile {
+    display: block !important;
+  }
+
+  .hiddenMobile {
+    display: none !important;
+  }
 }
