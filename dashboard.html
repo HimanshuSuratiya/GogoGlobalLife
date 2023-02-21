@@ -14,6 +14,61 @@
     <link href="./css/style.min.css" rel="stylesheet">
     <link href="./css/fontawesome.min.css" rel="stylesheet">
     <link href="./css/responsive.css" rel="stylesheet">
+    <style>
+        .notification-dropdown {
+            display: none;
+        }
+
+        .notification_bell {
+            position: relative;
+        }
+
+        .notification_bell .notification-dropdown {
+            position: absolute;
+            top: 30px;
+            left: -8.5rem;
+            list-style-type: none;
+            background: #171716;
+            border-radius: 5px;
+            height: 44.3vh;
+            width: 20vw;
+            padding: 8px 6px;
+            overflow: auto;
+        }
+
+        .show-notification-dropdown {
+            display: block;
+        }
+
+        .inner-notification-area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #20201f;
+            color: #fff;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            padding: 5px 10px 15px 10px;
+        }
+
+        .inner-notification-area p {
+            font-size: 12px;
+            font-weight: 600;
+            color: #cdcdcd;
+        }
+
+        .inner-notification-area i {
+            background-color: #171716;
+            padding: 8px 12px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .notification_bell .notification-dropdown::-webkit-scrollbar {
+            width: 0.1px;
+            background-color: #F5F5F5;
+        }
+    </style>
 </head>
 
 <body style="font-family: Roboto, sans-serif;">
@@ -78,10 +133,47 @@
                                 <li><a class="dropdown-item" href="login.html">Log Out</a></li>
                             </ul>
                         </li>
-
-                        <li class="notification_bell">
+                        <li class="notification_bell" onclick="dropdown()">
                             <a href="#" class="color_white"><i class="fas fa-bell"></i></a>
                             <span class="noti_number">5</span>
+                            <ul class="notification-dropdown" id="notification-dropdown">
+                                <li>
+                                    <div class="inner-notification-area">
+                                        <p class="p-0 m-0">Stock Management Features</p>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner-notification-area">
+                                        <p class="p-0 m-0">StockFinder Features level</p>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner-notification-area">
+                                        <p class="p-0 m-0">StockFinder Enchancement</p>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner-notification-area">
+                                        <p class="p-0 m-0">StockFinder Pricing Matrix Enchancement</p>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner-notification-area">
+                                        <p class="p-0 m-0">StockFinder Enchancement</p>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner-notification-area">
+                                        <p class="p-0 m-0">Stock Management Features</p>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                            </ul>
                         </li>
                         <li class="comment_chat">
                             <a href="#" class="color_white"><i class="far fa-comment-alt"></i></a>
@@ -473,6 +565,10 @@
                         });
                     });
                 });
+
+                function dropdown() {
+                    document.getElementById('notification-dropdown').classList.toggle('show-notification-dropdown');
+                }
             </script>
 </body>
 
